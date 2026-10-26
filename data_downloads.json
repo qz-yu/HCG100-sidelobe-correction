@@ -1,0 +1,15 @@
+{
+  "support_archive": {
+    "path": "data-parts/supporting_inputs.zip",
+    "size_bytes": 105437,
+    "sha256": "876c4d5f47fd6ce29d8803920011e17fd141e5bd3a422a11af28954b697582ce"
+  },
+  "vla_cube": {
+    "path": "VLA/HCG100_HI.fits.gz",
+    "size_bytes": 41212957,
+    "sha256": "9f60a4cf38a83917645699f6135e2043476509dd7e389adcb4fa53e05c54d886",
+    "uncompressed_size_bytes": 56629440,
+    "uncompressed_sha256": "9fb5d8b73d4adda2eb03409587f8251e461cf20a6845d72e4db9c5ac2bb59a15",
+    "url": "https://github.com/qz-yu/HCG100-sidelobe-correction/releases/download/v1.0.0/HCG100_HI.fits.gz"
+  }
+}

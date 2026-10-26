@@ -1,0 +1,384 @@
+{
+  "description": "Inputs referenced by the three supplied notebooks. The two VLA inputs are losslessly gzip compressed; other files are copied without modification.",
+  "source_notebook_sha256": {
+    "01_prepare_vla_scaled_truth_maps.ipynb.ipynb": "8a2797aaa416359b163033064660c75636c81c30c950d98f7fe3966750a017b3",
+    "02_sidelobe_maps_5200_5600.ipynb": "fce9afda682ecc2bc37a1898c93f5607040b405b821b0544602b6e553966ec42",
+    "03_sidelobe-subtraction-smooth-2fov-VLA.ipynb": "b0db3ed80dad71d82056afafa6ab36603e205019465a4dc13699eeb836a42583"
+  },
+  "files": [
+    {
+      "path": "VLA/HCG100_HI.fits.gz",
+      "size_bytes": 41212957,
+      "sha256": "9f60a4cf38a83917645699f6135e2043476509dd7e389adcb4fa53e05c54d886",
+      "uncompressed_size_bytes": 56629440,
+      "uncompressed_sha256": "9fb5d8b73d4adda2eb03409587f8251e461cf20a6845d72e4db9c5ac2bb59a15"
+    },
+    {
+      "path": "VLA/HCG100_mask.fits.gz",
+      "size_bytes": 38915,
+      "sha256": "6219d39ebbd1484ad6b0130ad83dc87e8894ee57181711506cd67e3ccafffd14",
+      "uncompressed_size_bytes": 28330560,
+      "uncompressed_sha256": "18abf1161829469b2967e3f7c0efe9a3f851cb744b8abc37a66aae89805ad600"
+    },
+    {
+      "path": "rawcube/HCG100-2fov-HIcube-pix1.4arcmin-20kms-1-mJyBeam-1.fits",
+      "size_bytes": 1074240,
+      "sha256": "4efbbd965b77e84ad91484794c61c1f43878cbb60fbfafb9a19162225689479f"
+    },
+    {
+      "path": "moments/moment0_5200_5600_2fov_mJykmsBeam.fits",
+      "size_bytes": 11520,
+      "sha256": "64168aae5e41c940cc5696e2449e49aedbdcb710ef574e53802c401fcfd5c1f7"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M01-beam-kernal.fits",
+      "size_bytes": 11520,
+      "sha256": "41bf41320ca27d2e0ed41ac60769d049e9432d93d70b197bda650a9e6da3b06f"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M01-beam-clean2.fits",
+      "size_bytes": 11520,
+      "sha256": "7c1f76447245cfa26b021ca6f8935e6c90a826d758576cf785086659f5baba64"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M02-beam-kernal.fits",
+      "size_bytes": 11520,
+      "sha256": "747ef8e2564cc2159a8dd03cd9efc2eec840b04dddff4e9beeeb6b76605cbe36"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M02-beam-clean2.fits",
+      "size_bytes": 11520,
+      "sha256": "679e264c4c5605c790c0b8c246f1e2a17b4d078f35354f028a7157f2634f9b04"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M03-beam-kernal.fits",
+      "size_bytes": 11520,
+      "sha256": "004a9a3badfc9c21228147701e70c5f97f18a87361177c9cc5d803f40e132bc6"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M03-beam-clean2.fits",
+      "size_bytes": 11520,
+      "sha256": "37215e02aa82d4d2a418dce90398ecac1d4987f3eb4bcabbcc303c10e32b30aa"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M04-beam-kernal.fits",
+      "size_bytes": 11520,
+      "sha256": "c783c7e111143e08bf60f68f5f68dabba51e016cf6e6a855225ef58331b54388"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M04-beam-clean2.fits",
+      "size_bytes": 11520,
+      "sha256": "312adc15eea3532cdaf5170e87980eabaff042a030b73c693350413dab3a6db6"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M05-beam-kernal.fits",
+      "size_bytes": 11520,
+      "sha256": "6f0478a695ba96d29abc33188e536760c62cba76c4d85b7cb25842fea1ffa132"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M05-beam-clean2.fits",
+      "size_bytes": 11520,
+      "sha256": "77bfa468f4c7127c15714b5638ada1d2ab160889e2cf21a7964836f31388fed2"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M06-beam-kernal.fits",
+      "size_bytes": 11520,
+      "sha256": "f259b66215aa4643cc2753da076bca37b9c329a439e627119a1a6306e1682162"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M06-beam-clean2.fits",
+      "size_bytes": 11520,
+      "sha256": "03e131b9fb17d9da26afb3ed2c50884904bae6d38191d2c1b2249ec3021044cd"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M07-beam-kernal.fits",
+      "size_bytes": 11520,
+      "sha256": "5d1962995d6c1353e1a4ad5629d25526eb748caad3954d46f98d6049733b1a4a"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M07-beam-clean2.fits",
+      "size_bytes": 11520,
+      "sha256": "1afe6e9b45fb9d7f0b965540b5f0bea7db43933cf2dbed2f24cae03c1d0ce51e"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M08-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "cb337bf6d052cca163b3ec73a672927269155fe208e0d70115b07fc6fe7ac1cf"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M08-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "87311c3a5ed1d0f4576c8cb808ca178b45ade82cd4f0429bb9d4077ace06f3b2"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M09-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "1ee5b588325afa0ec95c5403bf65c54b120a9a94e55851b6077c18fcc65eb8a7"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M09-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "641351be2c959517379f9126aed40f444159669db66b001587436c4b01f41b0e"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M10-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "23656e16646d0725ac48254957d8494a12a318a602e93c5bde9ced36c1c97841"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M10-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "9987e942a44422c14cd8bbe2e3d1fe8dad6af80cb16eeb134119bd9430e5fe6d"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M11-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "3a0f70b56304233348931859a2e9c7b1d6419645a088c61d3c3551ec2a7148c7"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M11-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "d0efa8529eea450f9c2e44ff9a3dd1b9581fcebd40292cdc2a75d167b4a42716"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M12-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "4d54b5bd32c1d8dbbb05b6f38dae6ad81d33536e4839c4cee6e820032f8418a3"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M12-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "0c70842ca81ae0bd38ad80c0ba9791431dbe0c68b7802782ab091b458ffa278b"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M13-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "0dc75fd8276aee475ab346d86550ae47c2562e46587f395cc7e510dac4a6eb2a"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M13-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "9eeee999eba2e819c06ff53237064542ceb771a2a0110f72fa92742920c66089"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M14-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "b1d02db19936416fd90f201032eed568cb0b5c59d9339506b0b967762a5a5162"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M14-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "9ae056bff3249b5cd0a859d544cf432e882377d912f493ddb13fd8052948c20a"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M15-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "5711ad2f9bc13f8454869909ab228435568fced54f3543be696f8b46256fb5cc"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M15-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "e9c9f4cf278c8ba0561e12347b61174eead766a3e4db28e1fcd63ebb618f5ad1"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M16-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "b1044aa6c393c7feda3f0544b66f6191507b532df3c19e66d715570fa25518db"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M16-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "500adf64360074456e32c4dfc3f825aed35490d6f2b0d2ceeffd47ec55a906e1"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M17-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "a59075db1b95e0c3e24b3e6450a45682e4f33b63aac49db5e35dac061c1baec7"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M17-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "a2f80afaf39de0d6fd79cc8faeeb10a632122c39282901033c079388b0995773"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M18-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "d2e061217a82ed67821a31c7e52013fa91c59369f2c806f8707d8862a8c525a9"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M18-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "a945ab48f7c16c5e0a958abf6b34d95d8e59a155f5d5b6ce61dc9a55b819d11f"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M19-beam-kernal.fits",
+      "size_bytes": 8640,
+      "sha256": "14edb1affba3a5fa601c6e12155dfbec012c078adf4a3ddde4a18b29e41d942c"
+    },
+    {
+      "path": "sidelobe-corr/beam-big/M19-beam-clean2.fits",
+      "size_bytes": 8640,
+      "sha256": "926dc0e1660dd63ab87ddbc12e91f37c5ffe72af29e55e128436170c7a26fb3f"
+    },
+    {
+      "path": "pointing-check/HCG100_p1_radec.list",
+      "size_bytes": 418,
+      "sha256": "99addf007f87bdf30ab7b10ab9f9ec30fe8bc280f7966c028aac0da1e97eb163"
+    },
+    {
+      "path": "pointing-check/HCG100_p2_radec.list",
+      "size_bytes": 418,
+      "sha256": "c22af99a9d77f88f76e44fd4469115065522d5db968bfc62df8bbc8fc380ad4d"
+    },
+    {
+      "path": "pointing-check/HCG100_p3_radec.list",
+      "size_bytes": 418,
+      "sha256": "d4d708620601cea1046841cba713f6ceb29021e2359d792c969a5ebb34b7e460"
+    },
+    {
+      "path": "pointing-check/HCG100_p4_radec.list",
+      "size_bytes": 418,
+      "sha256": "9dd806a1437e5d9aeac8f9a1c34947b43620915e625dce3d0fc30058b8d4b954"
+    },
+    {
+      "path": "pointing-check/HCG100_p5_radec.list",
+      "size_bytes": 418,
+      "sha256": "e1dded3906e17c2712a269039a072a148583c9d3905bb97f897f2a2ebf2669e0"
+    },
+    {
+      "path": "pointing-check/HCG100_p6_radec.list",
+      "size_bytes": 418,
+      "sha256": "4dff45a255cbeafad3c14f29368e952d79ba27e8c03f03a7d1058219f12fe5cb"
+    },
+    {
+      "path": "pointing-check/HCG100_p7_radec.list",
+      "size_bytes": 418,
+      "sha256": "908779096485dd541303733970755faf2689f266842d2cd1de611d0b6be00481"
+    },
+    {
+      "path": "pointing-check/HCG100_p8_radec.list",
+      "size_bytes": 418,
+      "sha256": "804ad4c4165f9f20d402c707cd04d44e87ab06aed775ba8820a67306642a83d1"
+    },
+    {
+      "path": "pointing-check/HCG100_p9_radec.list",
+      "size_bytes": 418,
+      "sha256": "bd871a54a3ee58fca2e7b42705d56796812c86d8007f19109650a90331dedd95"
+    },
+    {
+      "path": "pointing-check/HCG100_p10_radec.list",
+      "size_bytes": 418,
+      "sha256": "17032d7e6693cd5e568842d13ea9f6801b0a553420a2e8d692106010334038dd"
+    },
+    {
+      "path": "pointing-check/HCG100_p11_radec.list",
+      "size_bytes": 418,
+      "sha256": "99daea5b7dbd6b953f30f853adacf7e74a908cc9adad279d0bed122e0fcd70a6"
+    },
+    {
+      "path": "pointing-check/HCG100_p12_radec.list",
+      "size_bytes": 418,
+      "sha256": "445771bd88c0dee43ccd95e8bf37da96d843f9cb043e64b81d6d67190057bea5"
+    },
+    {
+      "path": "pointing-check/HCG100_p13_radec.list",
+      "size_bytes": 418,
+      "sha256": "1598ea00885ac44cf05b3a894ff1461fe0a674cb6b2b562d472d64370d215934"
+    },
+    {
+      "path": "pointing-check/HCG100_p14_radec.list",
+      "size_bytes": 418,
+      "sha256": "881cca512ea71c6ca92774a91188323c39c74647e521204ed705b2cc3e1d4690"
+    },
+    {
+      "path": "pointing-check/HCG100_p15_radec.list",
+      "size_bytes": 418,
+      "sha256": "1e313f836c60ccf0b440190d43bf31ffeefae8c4674aedd0d6635ade59e04ab8"
+    },
+    {
+      "path": "pointing-check/HCG100_p16_radec.list",
+      "size_bytes": 418,
+      "sha256": "2daad5a4ce541a4cdca9a3de62ab2c18d39378513143f21d28362b5209352a24"
+    },
+    {
+      "path": "pointing-check/HCG100_p17_radec.list",
+      "size_bytes": 399,
+      "sha256": "11e34db05e7a5ccfdf7a18373caba8033cfc45533d383c130925f7baad7d0c1f"
+    },
+    {
+      "path": "pointing-check/HCG100_p18_radec.list",
+      "size_bytes": 399,
+      "sha256": "fd06aa1b852ef67685d8e15a87ec07ac3e2705c47a7c49f22fbbce42a10c9ae9"
+    },
+    {
+      "path": "pointing-check/HCG100_p19_radec.list",
+      "size_bytes": 399,
+      "sha256": "87310a67bcbc6e4bae7c0748aedaf7dd673676364e2acd54f69251959616bedd"
+    },
+    {
+      "path": "pointing-check/HCG100_p20_radec.list",
+      "size_bytes": 399,
+      "sha256": "eea395bf33e022198b009287247b86b697a6f0e8a2540ada3324e72723d34638"
+    },
+    {
+      "path": "pointing-check/HCG100_p21_radec.list",
+      "size_bytes": 399,
+      "sha256": "26ef3d24b7de64ff486c6ecee17ecc49a653c3cb845ef4e47731b99e71460598"
+    },
+    {
+      "path": "pointing-check/HCG100_p22_radec.list",
+      "size_bytes": 399,
+      "sha256": "9759a00c85ea5ba8761e811b7253f1bb12be469634a7d26a53ea3eb83b7f46c4"
+    },
+    {
+      "path": "pointing-check/HCG100_p23_radec.list",
+      "size_bytes": 399,
+      "sha256": "f669b9d7abd49955d1b28cbd18503ab8f093c3ca86e12d705bfb713b3e77a1b9"
+    },
+    {
+      "path": "pointing-check/HCG100_p24_radec.list",
+      "size_bytes": 399,
+      "sha256": "764fde237b2ba11f71a2e5b876cf6745ff6faea3693d0c13ca2e4d6a74a4383d"
+    },
+    {
+      "path": "pointing-check/HCG100_p25_radec.list",
+      "size_bytes": 399,
+      "sha256": "f62bf68309fe2b5f5a2d385024ad448bcaec801d10302fca79b5ab2fee942d5d"
+    },
+    {
+      "path": "pointing-check/HCG100_p26_radec.list",
+      "size_bytes": 399,
+      "sha256": "c5f45bb3af7432aee06461cef018850184d408a3c357a497a1621a06e0e061e2"
+    },
+    {
+      "path": "pointing-check/HCG100_p27_radec.list",
+      "size_bytes": 399,
+      "sha256": "6825ffb070a5d6a818cde6b8b76f24543c7803875069a9afbd9c2a9e934de658"
+    },
+    {
+      "path": "pointing-check/HCG100_p28_radec.list",
+      "size_bytes": 399,
+      "sha256": "c8b7c9db5a6d2550b97c706c70558424786c0bff3fa029e5e2ea4aed44ac587e"
+    },
+    {
+      "path": "pointing-check/HCG100_p29_radec.list",
+      "size_bytes": 399,
+      "sha256": "354238cc7b2dbe4b55bda84fb9537841c1c5737bfe0f78641e98ed1bc43c1e42"
+    },
+    {
+      "path": "pointing-check/HCG100_p30_radec.list",
+      "size_bytes": 399,
+      "sha256": "57452d6da59230774c114234c9801e4fb2366443629f837724fa53afae8993d4"
+    },
+    {
+      "path": "pointing-check/HCG100_p31_radec.list",
+      "size_bytes": 399,
+      "sha256": "b339b2197c7980a4d1c4a2f60bc229397780ee6d4245706b19073381c49b9af3"
+    },
+    {
+      "path": "pointing-check/HCG100_p32_radec.list",
+      "size_bytes": 399,
+      "sha256": "d3fa01d398858e0ff6f5d06023c36a9d2611ac2c39708f600f81fa64d573c812"
+    }
+  ]
+}

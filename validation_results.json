@@ -1,0 +1,41 @@
+{
+  "inputs": {
+    "input_files": 74,
+    "input_bytes": 42719344,
+    "pointings": 32,
+    "beams_per_pointing": 19,
+    "input_hashes": "PASS",
+    "notebook_syntax": "PASS"
+  },
+  "outputs": {
+    "cube_shape": [
+      140,
+      34,
+      28
+    ],
+    "dv_kms": 20.0,
+    "sampled_pixels": 560,
+    "pointing_hits_on_grid": 608,
+    "source_checks": {
+      "HCG100": {
+        "channel_weight_integral": 1.0,
+        "max_M0_recovery_error_mJy_beam_kms": 6.146728992462158e-07
+      },
+      "NGC7810": {
+        "channel_weight_integral": 1.0,
+        "max_M0_recovery_error_mJy_beam_kms": 1.1175870895385742e-07
+      },
+      "MRK935": {
+        "channel_weight_integral": 1.0,
+        "max_M0_recovery_error_mJy_beam_kms": 5.4016709327697754e-08
+      },
+      "AGC105092": {
+        "channel_weight_integral": 1.0,
+        "max_M0_recovery_error_mJy_beam_kms": 8.940696716308594e-08
+      }
+    },
+    "model_sum": "PASS",
+    "subtraction": "PASS",
+    "smoothing_and_mask": "PASS"
+  }
+}

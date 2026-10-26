@@ -1,0 +1,12 @@
+numpy
+scipy
+astropy
+spectral-cube
+radio-beam
+reproject
+photutils
+matplotlib
+jupyterlab
+nbclient
+nbformat
+ipykernel
