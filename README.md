@@ -15,15 +15,15 @@ jupyter lab
 
 Open the notebooks from the repository root and run every cell in this order:
 
-1. **01_prepare_vla_scaled_truth_maps.ipynb** �� mask the VLA cube, convolve it to the beam in the FAST header, and interpolate/reproject it to the FAST velocity and spatial grid. Check the FAST/VLA peak ratios and construct scaled source maps at native VLA resolution.
-2. **02_sidelobe_maps_5200_5600.ipynb** �� convolve each native-resolution source map with each of the 19 real and Gaussian beam responses. Subtract the Gaussian response, reproject to the FAST grid, and assemble the map using the 32 pointing tables.
-3. **03_sidelobe-subtraction-smooth-2fov-VLA.ipynb** �� distribute each integrated sidelobe map across velocity using its smoothed VLA aperture spectrum, subtract the summed model from the FAST cube, and apply the original spatial smoothing kernel.
+1. **01_prepare_vla_scaled_truth_maps.ipynb**: mask the VLA cube, convolve it to the beam in the FAST header, and interpolate/reproject it to the FAST velocity and spatial grid. Check the FAST/VLA peak ratios and construct scaled source maps at native VLA resolution.
+2. **02_sidelobe_maps_5200_5600.ipynb**: convolve each native-resolution source map with each of the 19 real and Gaussian beam responses. Subtract the Gaussian response, reproject to the FAST grid, and assemble the map using the 32 pointing tables.
+3. **03_sidelobe-subtraction-smooth-2fov-VLA.ipynb**: distribute each integrated sidelobe map across velocity using its smoothed VLA aperture spectrum, subtract the summed model from the FAST cube, and apply the original spatial smoothing kernel.
 
 All paths are relative to the repository root. The notebooks write intermediate products into the existing data directories and into `sidelobe-result-fits/`; rerunning them overwrites those products. Input files are listed in `input_manifest.json`.
 
 ## Method and parameters
 
-The reference maps use the masked VLA emission over **5200�C5600 km/s**. For the beam convolution, the native VLA moment maps are converted from mJy per VLA beam km/s to mJy arcmin?2 km/s using the VLA Gaussian beam area, `1.1331 �� BMAJ �� BMIN`.
+The reference maps use the masked VLA emission over **5200-5600 km/s**. For the beam convolution, the native VLA moment maps are converted from mJy per VLA beam km/s to mJy arcmin^-2 km/s using the VLA Gaussian beam area, `1.1331 * BMAJ * BMIN`.
 
 | Source | RA (deg) | Dec (deg) | Aperture radius (arcmin) | Adopted scale factor |
 | --- | ---: | ---: | ---: | ---: |
@@ -37,14 +37,14 @@ The scale factors are the fixed values recorded in notebook 01; running its peak
 Both beam kernels are resampled to the VLA pixel scale and divided by the **real-beam peak**. Their array centering is used as stored; the implementation applies no CRPIX shift. The integrated model is
 
 ```text
-S_source = pixel_area �� [truth_source * real_beam ? truth_source * Gaussian_beam]
+S_source = pixel_area x [truth_source * real_beam - truth_source * Gaussian_beam]
 ```
 
-where `*` denotes convolution. At each sampled FAST pixel, contributions from repeated pointings are averaged. Unsampled pixels receive zero before smoothing. The 19-beam sum saved as `diagnostic_sum19_*` is a diagnostic, not the assembled correction.
+where `*` denotes convolution and `x` denotes scalar multiplication. At each sampled FAST pixel, contributions from repeated pointings are averaged. Unsampled pixels receive zero before smoothing. The 19-beam sum saved as `diagnostic_sum19_*` is a diagnostic, not the assembled correction.
 
-For each source, negative aperture-spectrum values are set to zero for normalization. The resulting weights satisfy `sum(weight �� dv) = 1`, with `dv = 20 km/s` for the supplied cube. The source model is `S_source �� weight(v)`; its spatial pattern is therefore fixed across channels. Nearest-channel matching requires a separation of less than half a FAST channel.
+For each source, negative aperture-spectrum values are set to zero for normalization. The resulting weights satisfy `sum(weight * dv) = 1`, with `dv = 20 km/s` for the supplied cube. The source model is `S_source * weight(v)`; its spatial pattern is therefore fixed across channels. Nearest-channel matching requires a separation of less than half a FAST channel.
 
-The final smoothing uses `Gaussian2DKernel(x_stddev=0.8344, y_stddev=0.9631)` in pixels, retains the original NaN mask, and labels the output beam as 4�� �� 4��. These are the settings in notebook 03.
+The final smoothing uses `Gaussian2DKernel(x_stddev=0.8344, y_stddev=0.9631)` in pixels, retains the original NaN mask, and labels the output beam as 4 arcmin x 4 arcmin. These are the settings in notebook 03.
 
 ## Included data
 
@@ -54,7 +54,7 @@ The final smoothing uses `Gaussian2DKernel(x_stddev=0.8344, y_stddev=0.9631)` in
 | `rawcube/` | FAST two-field cube before this correction |
 | `moments/` | FAST moment-0 map used as the spatial header reference |
 | `sidelobe-corr/beam-big/` | 19 real response arrays (`*-beam-kernal.fits`) and 19 Gaussian arrays (`*-beam-clean2.fits`) |
-| `pointing-check/` | 32 pointing tables; row order corresponds to M01�CM19 |
+| `pointing-check/` | 32 pointing tables; row order corresponds to M01-M19 |
 
 The 74 reconstructed inputs total 42,719,344 bytes (42.7 MB). The VLA cube and mask use lossless gzip compression. Supporting inputs are bundled in `data-parts/supporting_inputs.zip`; `python prepare_data.py` unpacks and verifies them.
 
